@@ -1,0 +1,23 @@
+      body {
+        background-color: #B1E1FF;
+      }
+
+      hr{
+        border-style: none;
+        border-top-style: dotted;
+        border-color: gray;
+        border-width: 5px;
+        width:20%
+      }
+
+      h1, h3{
+        color: #66bfbf
+      }
+
+      #Contact-Header{
+        
+      }
+
+      /* .someClass
+            #someId
+            :somePseudo  */

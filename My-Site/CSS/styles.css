@@ -1,0 +1,278 @@
+/*
+Position = Static, Relative, Absolute, fixed
+Static is default
+relative to the element.  Leaves behind its ghost.
+absolute - relative to its parent's element.  Takes element out of the flow of the html
+fixed - will stay while scrolling
+*note a parent can also be a tag with a relative position
+
+ex:
+img{
+position:relative;
+left: 30px;
+}
+
+Coordinates - Used in conjuction with position property.  Top,bottom,right,left
+
+img{
+top:20px (pushed down)
+left:20px (pushed right)
+}
+
+*/
+
+/*
+Inline elemenets such as <img>, <span>, and <a> cannot have a width.  But if block elements take up the whole page,
+  how do you have two elements side by side with varying widths.
+  The answer...set the display property of a block element, for example, <div>, <p>, or <h1>, or in line element
+  such as <img>, <a>, or <span> to inline-block.
+*/
+
+#blockElement{
+  /*Demostrating how to create inline elemets with adjustable widths by setting display element within a block element
+  (In this case a div tag.  Using the hash tag allows be to refer to its id).*/
+  display:inline-block;
+  width:10%;
+  font-size:2.75rem;
+  /* comment out 'display: none' to see the example*/
+  display:none;
+}
+
+#inlineElement{
+  width: 10%;
+  display: inline-block;
+  font-size: 2.75rem;
+  /*HIDING ELEMENT.  USING VISIBILITY:HIDDEN PROPERTY WIILL ALSO HIDE BUT THE ELEMENT WILL STILL TAKE UP SPACE ON THE PAGE*/
+  /* comment out 'display: none' to see the example*/
+  display:none;
+}
+/*
+font-family: 'Merriweather', serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Sacramento', cursive;
+
+*/
+
+/*div{
+  background-color: #E4F9F5;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}*/
+
+body{
+/**remove default margin for body so that the body flows to the end of the page**/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  /*monospace is best for displaying code snippets on your web page*/
+  /*font-family: Helvetica Neue,Helvetica,Arial,sans-serif;*/
+  font-family: 'Merriweather', serif;
+
+  color:#40514e;
+
+}
+
+.top{
+  background-color: #E4F9F5;
+  /*to be able to set the top-cloud and the bottom-cloud realtive to
+  this container and not the body, insert
+  position:relative;
+  Then insert the following property in the top-cloud and bottom-cloud classes
+  position: absolute*/
+  position:relative;
+  padding-top: 100px;
+}
+
+.top-cloud{
+  position: absolute;
+  right:300px;
+  top:40px;
+}
+
+h1{
+
+  margin: 50px auto 0 auto;
+  /*margin-bottom: 0px;
+  --margin-left: 0px;
+  --margin-right: 0px;
+  --width: 20%;
+  --margin: 0 auto 0 auto;*/
+  font-family: 'Sacramento', cursive;
+  /*dynamic sizing fonts assigned a % or em size*/
+  /*100% = 16px.  For example (90px / 16px)*100 = 562.5%*/
+  /*2em = 16px.  For example (90px / 16px) = 5.625em */
+  /*Font sizes are inherited from parent tag.  For instance, if body had a font-size
+  of 2em, it will double the size of the font size in this h1 tag.  The exception is
+  when you are using static sizing like px*/
+  /* Assigning rem(root em) to the font size of an element means it will not be affected by parent font size*/
+  font-size: 90px;
+  color: #66BFBF;
+
+  /*
+  A note about centering.  Because body text-align property is set to center, changing block elements to a smaller
+  width will actually uncenter element.  If you want a smaller width for your block element use auto
+  for at least both horizontal properties of the margin property and give a value for the width property.  For example,
+  margin: 0 auto 0 auto;
+  width:10%
+  */
+
+}
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5 rem;
+  color: #66BFBF;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.web{
+  text-decoration: underline;
+}
+
+.bottom-cloud{
+  position: absolute;
+  left:250px;
+  bottom: 300px;
+}
+
+.middle-container{
+  margin: 100px 0;
+}
+
+.headshot-image{
+  width:15%;
+}
+
+.intro{
+  width: 30%;
+  margin:auto;
+}
+
+hr {
+  border: dotted #EAF6F6 6px;
+  border-bottom: none;
+  width:4%;
+  margin: 100px auto;
+}
+
+.skill-row{
+  margin: 100px auto 100px auto;
+  width:50%;
+  text-align: left;
+}
+
+.coding-image{
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+.tools-image{
+  width:25%;
+  float: right;
+  padding-right: 180px;
+}
+.vcs-image{
+  width:25%;
+  float: left;
+  margin-right: 30px;
+
+}
+.database-image{
+  width:25%;
+  float: right;
+  padding-right: 160px;
+}
+.queue-image{
+  width:25%;
+  float: left;
+  margin-right: 30px;
+
+}
+.protocol-image{
+  width:25%;
+  float: right;
+  padding-right: 160px;
+
+}
+
+.testing-image{
+  width:25%;
+  float: left;
+  margin-right: 30px;
+}
+
+h3{
+  font-family: 'Montserrat', sans-serif;
+  color: #11999E;
+}
+/*
+*  Adding clear will leave no space between floating image and text.
+.skills-desc{
+  clear:left;
+}*/
+
+/*.skills-desc-right{
+  clear:right;
+}*/
+
+p{
+  line-height: 2;
+}
+
+.contact-message{
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.btn {
+  background: #11cdd4;
+  background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+  background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: 'Montserrat';
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #30e3cb;
+  background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+  text-decoration: none;
+}
+
+.bottom-container{
+  background-color: #66bfbf;
+  padding: 50px 0 20px;
+}
+
+a{
+  color: #11999e;
+  font-family: 'Montserrat';
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #eaf6f6;
+}
+
+.copyright{
+  color: #eaf6f6;
+  font-size: .75rem;
+  padding: 20px 0px;
+}
